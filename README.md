@@ -1,0 +1,1 @@
+Best settings and extensions for C++ development.
