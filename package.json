@@ -180,6 +180,16 @@
       {
           "key": "ctrl+k",
           "command": "workbench.action.quickOpen"
+      },
+      {
+          "key": "ctrl+b",
+          "command": "cmake.build",
+          "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+      },
+      {
+          "key": "f7",
+          "command": "-cmake.build",
+          "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
       }
     ]
   }
