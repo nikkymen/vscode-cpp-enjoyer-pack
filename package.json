@@ -1,11 +1,11 @@
 {
-  "name": "cpp-enjoyer-pack",
+  "name": "enjoyer-cpp-pack",
   "publisher": "nikkymen",
-  "displayName": "C++ Enjoyer Pack",
-  "description": "Best settings and extensions for C++ development",
+  "displayName": "Enjoyer C++ Pack",
+  "description": "Best extensions for C++ development",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nikkymen/vscode-cpp-enjoyer-pack"
+    "url": "https://github.com/nikkymen/vscode-enjoyer-cpp-pack"
   },
   "version": "0.0.3",
   "engines": {
@@ -37,160 +37,5 @@
     "vadimcn.vscode-lldb",
     "yzhang.markdown-all-in-one",
     "nikkymen.vscode-customizer"
-  ],
-  "contributes": {
-    "configurationDefaults": {
-      "git.ignoreLimitWarning": true,
-      "editor.codeLens": false,
-      "editor.inlineSuggest.enabled": false,
-      "editor.renderWhitespace": "trailing",
-      "files.trimTrailingWhitespace": true,
-      "clangd.CodeLens.Enabled": true,
-      "clangd.arguments": [
-        "-log=error",
-        "-pretty",
-        "--query-driver=/usr/bin/g++",
-        "--clang-tidy=1",
-        "--background-index=1",
-        "--background-index-priority=normal",
-        "--all-scopes-completion=1",
-        "--completion-parse=auto",
-        "--completion-style=detailed",
-        "--debug-origin=0",
-        "--fallback-style=LLVM",
-        "--function-arg-placeholders=1",
-        "--header-insertion=never",
-        "--header-insertion-decorators=1",
-        "--import-insertions=0",
-        "--include-ineligible-results=0",
-        "--limit-references=1000",
-        "--limit-results=100",
-        "--ranking-model=decision_forest",
-        "--rename-file-limit=50",
-        "--malloc-trim=1",
-        "--parse-forwarding-functions=0",
-        "--pch-storage=memory",
-        "--use-dirty-headers=0"
-      ],
-      "colorIdentifiersMode.tokenKinds": [
-        "variable",
-        "parameter"
-      ],
-      "errorLens.codeLensEnabled": true,
-
-      "gitlens.showWelcomeOnInstall": false,
-      "gitlens.showWhatsNewAfterUpgrades": false,
-      "gitlens.currentLine.enabled": false,
-
-      "vscode_customizer.editor_context_selectors": [
-        "Peek",
-        "^Switch",
-        "^Go to",
-        "Find All Implementations",
-        "Show Call Hierarchy",
-        "Show Type Hierarchy",
-        "Refactor...",
-        "Source Action...",
-        "Commit Changes",
-        "Cut",
-        "Paste",
-        "Copy As",
-        "Bookmarks",
-        "Spelling",
-        "Format Document With...",
-        "Command Palette...",
-        "Show AST"
-        ]
-    },
-    "keybindings": [
-      {
-        "key": "alt+left",
-        "command": "-workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-      },
-      {
-        "key": "alt+left",
-        "command": "workbench.action.navigateBack",
-        "when": "canNavigateBack"
-      },
-      {
-        "key": "ctrl+alt+-",
-        "command": "-workbench.action.navigateBack",
-        "when": "canNavigateBack"
-      },
-      {
-        "key": "alt+right",
-        "command": "-workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-      },
-      {
-        "key": "alt+right",
-        "command": "-quickInput.acceptInBackground",
-        "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
-      },
-      {
-        "key": "alt+right",
-        "command": "workbench.action.navigateForward",
-        "when": "canNavigateForward"
-      },
-      {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
-      },
-      {
-        "key": "ctrl+i",
-        "command": "editor.action.formatSelection",
-        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-      },
-      {
-          "key": "ctrl+k ctrl+f",
-          "command": "-editor.action.formatSelection",
-          "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-      },
-      {
-          "key": "shift+enter",
-          "command": "-python.execSelectionInTerminal",
-          "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-      },
-      {
-          "key": "shift+enter",
-          "command": "-python.execInREPL",
-          "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
-      },
-      {
-          "key": "ctrl+enter",
-          "command": "-github.copilot.generate",
-          "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
-      },
-      {
-          "key": "alt+o",
-          "command": "-C_Cpp.SwitchHeaderSource",
-          "when": "editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !(config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/)"
-      },
-      {
-          "key": "f4",
-          "command": "cmantic.switchHeaderSourceInWorkspace"
-      },
-      {
-          "key": "alt+escape",
-          "command": "workbench.action.closePanel",
-          "when": "editorFocus"
-      },
-      {
-          "key": "ctrl+k",
-          "command": "workbench.action.quickOpen"
-      },
-      {
-          "key": "ctrl+b",
-          "command": "cmake.build",
-          "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
-      },
-      {
-          "key": "f7",
-          "command": "-cmake.build",
-          "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
-      }
-    ]
-  }
+  ]
 }

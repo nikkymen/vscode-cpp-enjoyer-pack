@@ -1,1 +1,3 @@
-Best settings and extensions for C++ development.
+Best extensions for C++ development.
+
+Enjoy it!
