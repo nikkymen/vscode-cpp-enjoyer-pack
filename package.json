@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/nikkymen/vscode-enjoyer-cpp-pack"
   },
-  "version": "0.0.3",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.101.0"
   },
@@ -17,25 +17,13 @@
   "preview": true,
   "icon": "images/logo.png",
   "extensionPack": [
-    "ms-azuretools.vscode-containers",
-    "ms-vscode-remote.remote-ssh",
-    "mhutchie.git-graph",
-    "maattdd.gitless",
-    "streetsidesoftware.code-spell-checker",
-    "usernamehw.errorlens",
     "tdennis4496.cmantic",
-    "jeff-hykin.better-cpp-syntax",
-    "HugoCabel.std-format-placeholder-highlighter",
     "llvm-vs-code-extensions.vscode-clangd",
     "ms-vscode.cmake-tools",
     "kylinideteam.cmake-intellisence",
     "SR-team.vscode-clangd-cmake",
     "SR-team.vscode-clangd-codelens",
-    "MatthewNespor.vscode-color-identifiers-mode",
-    "SteveBushResearch.BuildOutputColorizer",
     "k4li.cpp-class-generator",
-    "vadimcn.vscode-lldb",
-    "yzhang.markdown-all-in-one",
-    "nikkymen.vscode-customizer"
+    "vadimcn.vscode-lldb"
   ]
 }
